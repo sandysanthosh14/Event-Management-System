@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block header %}
+
+
+<h1>Event Category</h1>
+
+<a href="/create-event/">Create New Event</a>
+<table>
+    {% for category in event_category %}
+    <tr>
+        <td>{{ forloop.counter }}</h3>
+        </td>
+        <td>
+            <h3>{{ category.name }}</h3>
+        </td>
+        <td>
+            <h3>{{ category.code }}</h3>
+        </td>
+
+        <td>
+            <h3>{{ category.status }}</h3>
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock header %}

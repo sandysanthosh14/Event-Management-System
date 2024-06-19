@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block base %}
+
+<h1>EVENT LIST</h1>
+
+{% for i in combined_list.events %}
+    <table>
+        <tr>
+            
+            <td>{{ forloop.counter}}</td>
+            <td>{{i.ename}}</td>
+            <td>{{i.start_date}}</td>
+            <td>{{i.end_date}}</td>
+            <td>{{i.location}}</td>
+            <td><a href="/join/{{i.ename}}">JOIN EVENT</a></td>
+            
+
+         </tr>
+</table>
+{%endfor%}
+{% endblock %}
+<style>
+
+
+
+</style>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block base %}
+<h1>Event Category</h1>
+    {% for category in event_category %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category.code }}</td>
+    
+        <td>{{ category.status }}</td>
+    
+    </tr>
+    {% endfor %}
+{% endblock base %}

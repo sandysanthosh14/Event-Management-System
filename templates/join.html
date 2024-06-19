@@ -1,0 +1,20 @@
+<h2>Event Name : {{ event.ename }}</h2>
+    <h2>>Date: {{ event.created_date }}</h2>
+    {% if registered %}
+        <p>you Have Already Regitered This Event</p>
+    {% else %}
+        <form method="POST">
+             {% csrf_token %}
+    
+            <button type="submit">AGREE TO JOIN</button>
+    
+         </form>
+    {% endif %}
+
+
+<ul>
+    <h1>EVENT ATTENDEES LIST</h1>
+    {% for i in event.attendees.all %}
+    <h2>{{i.username}}</h2>
+    {%endfor%}
+</ul>

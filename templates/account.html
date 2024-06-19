@@ -1,0 +1,12 @@
+<h1>MY ACCOUNT</h1>
+<h2>USER_NAME : {{user.username}}</h2>
+<h2>EMAIL_ADDRESS : {{user.email}}</h2>
+<hr>
+
+<h1>EVENT_LIST</h1>
+{% for i in user.events.all %} 
+    <h2>{{i.ename}}</h2>
+
+{%endfor%}
+<hr>
+<a href="{% url 'logout' %}"><h2>click to logout</h2></a>

@@ -1,0 +1,87 @@
+nav {
+    background-color: black;
+    color: white;
+    display: inline;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+li {
+    margin-left: 20px;
+
+
+}
+ul {
+    display: inline-block;
+    background-color: black;
+}
+
+ul {
+    text-align: center;
+    margin-left: 60%;
+    justify-content: space-around;
+}
+
+li:hover {
+    cursor: pointer;
+    color: red;
+}
+input{
+    width: 20%;
+    height: 40px;
+    padding-left: 30px;
+    font-size:x-large;
+}
+.search{
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+body {
+    background-image: url('eve.jpg');
+    
+    color: rgb(2, 2, 2);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+
+}
+
+h1 {
+    text-align: center;
+}
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.box{
+    display: inline-block;
+    border-width: 5px;
+    border-color: white;
+    border-style: solid;
+    width: 100px;
+    color: blue;
+    background-color: white;
+    justify-content: space-between;
+    flex-basis: 25%;
+}
+.concept{
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+.box:hover {
+    cursor: pointer;
+    color: red;
+}

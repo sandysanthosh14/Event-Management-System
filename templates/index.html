@@ -1,0 +1,62 @@
+
+{% load static %}
+
+<head>
+    <title>EVENTS</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" >
+</head>
+
+<body>
+    <div class="header">
+        
+        <nav>
+            <h1>WELCOME</h1>
+            <ul>
+                <li>HOME |</li>
+                <li>ABOUT | </li>
+                <li>CONTACTS | </li>
+                <li>SERVICE|</li>
+            </ul>
+        </nav>
+    </div>
+    {% block header %}
+    <div class="search">
+        <input placeholder="Search">
+        <button type="submit">Search</button>
+    </div>
+
+    <div class="concept">
+        <div class="box">
+            <a href="{% url 'event-list' %}"><h2>EVENT LIST</h2></a>
+        </div>
+        <div class="box">
+            <a href="{% url 'event-category-list' %}"><h2>EVENT CATECARY</h2></a>
+        </div>
+        <div class="box">
+            <a href="#"><h2>PROFILE</h2></a>
+        </div>
+        <div class="box">
+            <a href="http://127.0.0.1:8000/admin/" target="_blank"><h2>ADMIN</h2></a>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+        <div>
+            <a href="{% url 'account' pk=user.pk %}"><h2>my profile</h2></a>
+            <a href="{% url 'logout' %}"><h2>click to logout</h2></a>
+        </div>
+    {% else %}
+        <div>
+            <a href="http://127.0.0.1:8000/signup/"><h2>click to signup</h2></a>
+            <a href="{% url 'login' %}"><h2>click to login</h2></a>
+
+        </div>
+    {% endif %}
+    <div>
+        
+        
+        
+    </div>
+
+    <div class="foot"></div>
+    {% endblock header %}
+</body>

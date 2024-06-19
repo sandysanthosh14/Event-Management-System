@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block base %}
+{% for i in member %}
+<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{i.user}}</td>
+    <td>{{i.attended_date}}</td>
+    <td>{{i.joining_date}}</td>
+
+</tr>
+{% endfor %}
+{% endblock %}
